@@ -1,0 +1,26 @@
+<section class="task-container">
+  <div class="task">
+    <div class="task__title"><span>{{task.title}}</span></div>
+    <div class="task__detail">
+      <div class="task__user">
+        <span>انجام دهنده:</span>
+        <b>{{task.person}}</b>
+      </div>
+      <div class="task__date">
+        <span>اولویت انجام:</span>
+        <b>{{task.priority}}</b>
+      </div>
+    </div>
+    <div class="task__description"><span>{{task.description}}</span></div>
+    <div>
+      <button class="task__action-button delete-button" (click)="deleteTask()">
+        <span class="material-icons">delete</span>
+        <b>حذف</b>
+      </button>
+      <button class="task__action-button edit-button" (click)="setForEdit(task)">
+        <span class="material-icons">edit</span>
+        <b>ویرایش</b>
+      </button>
+    </div>
+  </div>
+</section>

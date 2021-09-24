@@ -1,0 +1,20 @@
+@import '../../../assets/global-styles/variables';
+
+.message {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: $solid-white;
+  transition: all .5s;
+}
+
+.danger {
+  background-color: $danger-color;
+}
+
+.normal {
+  background-color: $normal-color;
+}

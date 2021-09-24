@@ -1,0 +1,46 @@
+@import '../../../assets/global-styles/variables';
+
+:host {
+  flex-basis: calc(20% - 1rem);
+}
+
+.sidebar-container {
+  width: 100%;
+  height: $height-calculator;
+  background-color: $solid-white;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-item {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .35s ease-in-out;
+}
+
+.normal-item {
+  border: 1px solid $normal-color;
+  color: $normal-color;
+  &:hover {
+    background-color: $normal-color-transparent;
+    border-color: $normal-color-transparent;
+  }
+  &--active {
+    border-width: 2px;
+  }
+}
+
+.exit-item {
+  border: 2px solid $danger-color;
+  color: $danger-color;
+  &:hover {
+    background-color: $danger-color-transparent;
+    border-color: $danger-color-transparent;
+  }
+}

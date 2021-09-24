@@ -1,0 +1,76 @@
+@import '../../../assets/global-styles/variables';
+
+.task-container {
+  height: 100%;
+}
+
+.task {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: $body-bg;
+  padding: 1rem;
+  &__title {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: .35rem 0;
+    text-align: center;
+    background-color: $solid-white;
+    border-radius: .7rem;
+  }
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+  }
+  &__user, &__date {
+    text-align: center;
+    background-color: $solid-white;
+    padding: .35rem;
+    border-radius: .7rem;
+    b {
+      margin-right: .3rem;
+    }
+  }
+  &__description {
+    background-color: $solid-white;
+    padding: .35rem;
+    border-radius: .7rem;
+    font-size: .85rem;
+    height: calc(100% - 7.5rem);
+    margin-bottom: 1rem;
+  }
+  &__action-button {
+    color: #fff;
+    position: relative;
+    b {
+      opacity: 0;
+      position: absolute;
+      top: -100%;
+      right: 0;
+      background-color: $dark-bg;
+      color: $solid-white;
+      border-radius: .5rem;
+      padding: .25rem;
+    }
+    &:hover {
+      b {
+        transition: all .5s;
+        opacity: 1;
+      }
+    }
+    &:last-of-type {
+      margin-right: .5rem;
+    }
+  }
+}
+
+.delete-button {
+ color: $danger-color;
+}
+
+.edit-button {
+  color: $normal-color;
+}

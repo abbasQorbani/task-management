@@ -1,0 +1,52 @@
+@import '../../../assets/global-styles/variables';
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.task-container {
+  flex-basis: 80%;
+  height: $height-calculator;
+  background-color: $solid-white;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - .5rem));
+  grid-template-rows: repeat(2, calc(50% - .5rem));
+  grid-gap: 1rem;
+  div {
+    height: 100%;
+  }
+}
+
+.admin-container {
+  flex-basis: 80%;
+  height: $height-calculator;
+  background-color: $solid-white;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.add-task {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &__body {
+    width: 100%;
+    height: fit-content !important;
+    text-align: center;
+    color: $normal-color;
+    .material-icons {
+      font-size: 4rem;
+    }
+  }
+  &__title {
+    margin-bottom: .5rem;
+  }
+}

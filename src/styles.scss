@@ -1,0 +1,33 @@
+@import './assets/global-styles/variables';
+@font-face {
+  font-family: Vazir;
+  src: url('assets/fonts/vazir/Vazir-FD.eot');
+  src: url('assets/fonts/vazir/Vazir-FD.eot?#iefix') format('FontName-opentype'),
+       url('assets/fonts/vazir/Vazir-FD.woff') format('woff'),
+       url('assets/fonts/vazir/Vazir-FD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button, input, textarea {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazir;
+  background-color: $body-bg;
+  overflow: hidden;
+}

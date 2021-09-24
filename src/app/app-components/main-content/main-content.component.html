@@ -1,0 +1,34 @@
+<app-header *ngIf="user.role !== 'admin'"></app-header>
+<div class="flex-container">
+  <app-side-bar></app-side-bar>
+  <div class="task-container" *ngIf="user.role !== 'admin'">
+    <div *ngFor="let task of tasks; index as ind">
+      <app-task
+        [task]='task'
+        (edit)='setSelectedTaskForEdit($event)'
+        (delete)='deleteTask(ind)'>
+      </app-task>
+    </div>
+    <div *ngIf="tasks.length < 4" class="add-task" (click)="setForAddNewTask()">
+      <div class="add-task__body">
+        <div class="add-task__title">
+          <span>اضافه کردن وظیفه جدید</span>
+        </div>
+        <span class="material-icons">add</span>
+      </div>
+    </div>
+  </div>
+  <div class="admin-container" *ngIf="user.role === 'admin'">
+    <span>شما با اکانت ادمین وارد شده اید.</span>
+  </div>
+</div>
+<app-footer *ngIf="user.role !== 'admin'"></app-footer>
+
+<app-add-edit-task
+  *ngIf="showEdit"
+  [type]='changeTaskType'
+  [task]='selectedTask'
+  (formChanged)='setChangeToTask($event)'>
+</app-add-edit-task>
+
+<app-message *ngIf="showMessage" [type]='message.type' [text]='message.text'></app-message>

@@ -1,0 +1,21 @@
+<section class="task-form-container">
+  <form [formGroup]='taskForm' class="task-form">
+    <div class="task-form__input-holder">
+      <label class="task-form__input-label" for="title">عنوان وظیفه</label>
+      <input formControlName="title" class="task-form__input" type="text" id="title" placeholder="عنوان وظیفه" />
+    </div>
+    <div class="task-form__input-holder">
+      <label class="task-form__input-label" for="person">انجام دهنده</label>
+      <input formControlName="person" class="task-form__input" type="text" id="person" placeholder="انجام دهنده" />
+    </div>
+    <div class="task-form__input-holder">
+      <label class="task-form__input-label" for="priority">اولویت انجام</label>
+      <input formControlName="priority" class="task-form__input" type="text" id="priority" placeholder="اولویت انجام" />
+    </div>
+    <div class="task-form__input-holder">
+      <label class="task-form__input-label" for="description">توضیحات وظیفه</label>
+      <textarea formControlName="description" class="task-form__input" id="description" placeholder="توضیحات وظیفه"></textarea>
+    </div>
+  </form>
+  <button class="task-form__button" (click)="fireChange()" [disabled]='formIsInvalid'>{{buttonText}}</button>
+</section>

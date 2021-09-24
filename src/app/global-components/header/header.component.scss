@@ -1,0 +1,9 @@
+@import '../../../assets/global-styles/variables';
+.app-header {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: $solid-white;
+  border-radius: 1rem;
+}

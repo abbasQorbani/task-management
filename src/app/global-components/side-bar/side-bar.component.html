@@ -1,0 +1,11 @@
+<section class="sidebar-container">
+  <div *ngIf="user.role !== 'admin'">
+    <div class="sidebar-item normal-item" *ngFor="let item of sideBarItem"
+      [class]='item.type === pathName ? "normal-item--active" : ""'>
+      <span>{{item.text}}</span>
+    </div>
+  </div>
+  <div class="sidebar-item exit-item" (click)="exit()">
+    <span>خروج</span>
+  </div>
+</section>

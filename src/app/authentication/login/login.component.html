@@ -1,0 +1,21 @@
+<section class="login">
+  <div class="login__body">
+    <div class="login__header"><span>لطفا با اکانت ادمین/کاربر وارد شوید</span></div>
+    <form [formGroup]="loginForm">
+      <div class="login__input-holder">
+        <label class="login__input-label" for="username">نام کاربری</label>
+        <input  formControlName="userName" class="login__input" type="text" id='username' placeholder="نام کاربری خود را وارد کنید" />
+        <span class="login__input-error">فقط اعداد و حروف انگلیسی</span>
+      </div>
+      <div class="login__input-holder">
+        <label class="login__input-label" for="password">رمز عبور</label>
+        <input formControlName="password" class="login__input" type="password" id='password' placeholder="رمز عبور خود را وارد کنید" />
+        <span class="login__input-error">فقط اعداد و حروف انگلیسی</span>
+      </div>
+    </form>
+    <button class="login__button" (click)="login()">
+      ورود
+    </button>
+  </div>
+</section>
+<app-message *ngIf="hasMessage" [type]='message.type' [text]='message.text'></app-message>
